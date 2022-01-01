@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta author="Vlad Marginean" email="vladmarginea@softwiz.ro" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<style>
+		@keyframes cursor-blink {
+			0% {
+				opacity: 0;
+			}
+		}
+
+		@keyframes pulsate {
+			100% {
+				/* Larger blur radius */
+				text-shadow:
+					0 0 4px #fff,
+					0 0 11px #fff,
+					0 0 19px #fff,
+					0 0 40px #00ffaa,
+					0 0 80px #00ffaa,
+					0 0 90px #00ffaa,
+					0 0 100px #00ffaa,
+					0 0 150px #00ffaa;
+			}
+
+			0% {
+				/* A slightly smaller blur radius */
+				text-shadow:
+					0 0 4px #fff,
+					0 0 10px #fff,
+					0 0 18px #fff,
+					0 0 38px #00ffaa,
+					0 0 73px #00ffaa,
+					0 0 80px #00ffaa,
+					0 0 94px #00ffaa,
+					0 0 140px #33ff00;
+			}
+		}
+
+
+
+		.neonText {
+			color: #fff;
+			text-shadow:
+				0 0 7px #fff,
+				0 0 10px #fff,
+				0 0 21px #fff,
+				0 0 42px #00ffaa,
+				0 0 82px #0fa,
+				0 0 92px #00ffaa,
+				0 0 102px #0fa,
+				0 0 151px #0fa;
+		}
+
+		/* Additional styling */
+
+		body {
+			font-size: 18px;
+			font-family: "Vibur", sans-serif;
+			background-color: #010a01;
+			/* position: relative; */
+		}
+
+		h1,
+		h2 {
+			text-align: center;
+			text-transform: uppercase;
+			font-weight: 400;
+		}
+
+		h1 {
+			margin: 0;
+  			line-height: 0.0;
+			font-size: 5.2rem;
+			/* padding-bottom: 0px; */
+			/* animation: glitch1 2.75s infinite; */
+		}
+
+		h1:nth-child(2) {
+			color: #e6ffd775;
+			animation: glitch2 2.5s infinite;
+		}
+
+		h1:nth-child(3) {
+			color: #f16f6f60;
+			animation: glitch3 2.5s infinite;
+		}
+
+		h2 {
+			padding-top:75px;
+			font-size: 1.90rem;
+			animation: pulsate 0.31s ease-in-out infinite alternate;
+		}
+
+		.container {
+			height: inherit;
+		}
+
+		.centered {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		.c1::after {
+			content: " _";
+			width: 5px;
+			height: 5.2rem;
+			/* background: #9cffde; */
+			display: inline-block;
+			animation: cursor-blink 1.5s steps(2) infinite;
+		}
+
+		@keyframes glitch1 {
+			0% {
+				transform: none;
+				opacity: 1;
+			}
+
+			7% {
+				transform: skew(-0.5deg, -0.9deg);
+				opacity: 0.75;
+			}
+
+			10% {
+				transform: none;
+				opacity: 1;
+			}
+
+			27% {
+				transform: none;
+				opacity: 1;
+			}
+
+			30% {
+				transform: skew(0.8deg, -0.1deg);
+				opacity: 0.75;
+			}
+
+			35% {
+				transform: none;
+				opacity: 1;
+			}
+
+			52% {
+				transform: none;
+				opacity: 1;
+			}
+
+			55% {
+				transform: skew(-1deg, 0.2deg);
+				opacity: 0.75;
+			}
+
+			50% {
+				transform: none;
+				opacity: 1;
+			}
+
+			72% {
+				transform: none;
+				opacity: 1;
+			}
+
+			75% {
+				transform: skew(0.4deg, 1deg);
+				opacity: 0.75;
+			}
+
+			80% {
+				transform: none;
+				opacity: 1;
+			}
+
+			100% {
+				transform: none;
+				opacity: 1;
+			}
+		}
+
+		@keyframes glitch2 {
+			0% {
+				transform: none;
+				opacity: 0.25;
+			}
+
+			7% {
+				transform: translate(-1px, -3px);
+				opacity: 0.5;
+			}
+
+			10% {
+				transform: none;
+				opacity: 0.25;
+			}
+
+			27% {
+				transform: none;
+				opacity: 0.25;
+			}
+
+			30% {
+				transform: translate(-2px, -2px);
+				opacity: 0.5;
+			}
+
+			35% {
+				transform: none;
+				opacity: 0.25;
+			}
+
+			52% {
+				transform: none;
+				opacity: 0.25;
+			}
+
+			55% {
+				transform: translate(-2px, -1px);
+				opacity: 0.5;
+			}
+
+			50% {
+				transform: none;
+				opacity: 0.25;
+			}
+
+			72% {
+				transform: none;
+				opacity: 0.25;
+			}
+
+			75% {
+				transform: translate(-2px, -6px);
+				opacity: 0.5;
+			}
+
+			80% {
+				transform: none;
+				opacity: 0.25;
+			}
+
+			100% {
+				transform: none;
+				opacity: 0.25;
+			}
+		}
+
+		@keyframes glitch3 {
+			0% {
+				transform: none;
+				opacity: 0.25;
+			}
+
+			7% {
+				transform: translate(2px, 3px);
+				opacity: 0.5;
+			}
+
+			10% {
+				transform: none;
+				opacity: 0.25;
+			}
+
+			27% {
+				transform: none;
+				opacity: 0.25;
+			}
+
+			30% {
+				transform: translate(2px, 2px);
+				opacity: 0.5;
+			}
+
+			35% {
+				transform: none;
+				opacity: 0.25;
+			}
+
+			52% {
+				transform: none;
+				opacity: 0.25;
+			}
+
+			55% {
+				transform: translate(2px, 1px);
+				opacity: 0.25;
+			}
+
+			50% {
+				transform: none;
+				opacity: 0.25;
+			}
+
+			72% {
+				transform: none;
+				opacity: 0.25;
+			}
+
+			75% {
+				transform: translate(2px, 6px);
+				opacity: 0.25;
+			}
+
+			80% {
+				transform: none;
+				opacity: 0.25;
+			}
+
+			100% {
+				transform: none;
+				opacity: 0.25;
+			}
+		}
+	</style>
+
+<body>
+	<div class="container">
+		<div class="centered">
+			<h1 class="neonText">
+				v|.^.|)
+			</h1>
+			<h1 class="neonText">
+				<!-- v|.^.|) -->
+			</h1>
+			<h1 class="neonText">
+				v|.^.|)
+			</h1>
+			<h2 class="neonText">nu e lingură</h2>
+			<div class="neonText c1"></div>
+		</div>
+	</div>
+
+</body>
+
+</html>
